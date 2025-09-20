@@ -48,3 +48,17 @@ table {
 	border-spacing: 0;
 }
 /* My own css Baby!!! */
+.Image {
+	box-sizing: border-box;
+	text-align: center ;
+
+}
+.test-box{
+
+	width: 30px;
+	border: 20px;
+	background-color: blueviolet;
+	padding: 20px;
+
+}
+.test-box-nosizing
