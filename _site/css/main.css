@@ -1,55 +1,39 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* header basics */
+.site-header { background:#0f172a; color:#fff; }
+.container { max-width:1100px; margin:0 auto; padding:12px 16px; }
+.brand { color:#fff; text-decoration:none; font-weight:700; }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+.nav { display: flex; gap: 16px; }
+.nav a { color: #fff; text-decoration: none; }
+.nav a:hover { text-decoration: underline; }
+.nav-toggle { display: none; background: transparent; border: 0; color: #fff; font-size: 24px; }
+
+.nav a.active {
+  color: #38bdf8;
+  text-decoration: none;
+  border-bottom: 2px solid #38bdf8;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+
+/* Footer basics*/
+.site-footer {
+  background:#0f172a;
+  color:#cbd5e1;
+  border-top:1px solid rgba(255,255,255,.08);
+  padding:16px 0;
 }
-body {
-	line-height: 1;
-  font-family: arial, sans;
+.site-footer p { margin:0; text-align:center; }
+
+/* header layout (desktop default) */
+.site-header .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-img {
-  border-radius: 50%;
-}
-.The_logo {
-	border-radius: 50%;
-}
+
+
+/* CSS-only mobile: stack nav under brand */
+@media (max-width: 720px) {
+  .site-header .container { flex-direction: column; align-items:flex-start; }
+  .nav { width:100%; }
