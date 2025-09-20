@@ -1,23 +1,18 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>My portfolio</title>
-    <link rel="stylesheet" href="css/main.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="{{ '/css/main.css?v=' | append: site.time | relative_url }}">
+</head>
+<body>
+  {% include header.html %}
 
+  <main>
+    {{ content }}
+  </main>
 
-
-  </head>
-  <body>
-
-    {% include header.html %}
-
-    <main>
-      {{ content }}
-    </main>
-
-    {% include footer.html %}
-
-  </body>
+  {% include footer.html %}
+</body>
 </html>
