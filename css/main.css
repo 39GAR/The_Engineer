@@ -47,18 +47,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* My own css Baby!!! */
-.Image {
-	box-sizing: border-box;
-	text-align: center ;
-
+img {
+  border-radius: 50%;
 }
-.test-box{
-
-	width: 30px;
-	border: 20px;
-	background-color: blueviolet;
-	padding: 20px;
-
+.The_logo {
+	border-radius: 50%;
 }
-.test-box-nosizing
