@@ -65,3 +65,105 @@
   box-shadow: 0 8px 18px rgba(0,0,0,.25);
   outline: none;
 }
+
+/* Case study */
+.case { padding: 24px 0 40px; }
+.cs-hero { background: #0b1220; color: #fff; padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+.cs-meta { list-style: none; margin: 8px 0 16px; padding: 0; display: flex; gap: 16px; flex-wrap: wrap; color: #93a0b2; }
+.cs-meta li strong { color: #fff; margin-right: 6px; }
+
+.prose { padding: 24px 0; }
+.prose h2 { margin: 24px 0 8px; }
+.prose p  { margin: 0 0 12px; max-width: 70ch; }
+
+.gallery { padding: 12px 0 0; }
+.gallery img { width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid rgba(255,255,255,.08); margin: 12px 0; }
+
+.cs-nav { padding: 16px 0; }
+.cs-nav a { color: #38bdf8; text-decoration: none; }
+.cs-nav a:hover { text-decoration: underline; }
+
+/* Contact form */
+.contact { padding: 40px 0; }
+.contact h1 { margin: 0 0 12px; }
+.contact p  { color: Grey; }
+
+.contact__form {
+  display: grid;
+  gap: 12px;
+  max-width: 520px;
+  margin-top: 16px;
+}
+.contact__form label { display: grid; gap: 6px; font-weight: 600; color: Grey; }
+.contact__form input,
+.contact__form select,
+.contact__form textarea {
+  background: #0f172a; color: #fff; border: 1px solid rgba(255,255,255,.15);
+  border-radius: 10px; padding: 10px 12px; outline: none;
+}
+.contact__form input:focus,
+.contact__form select:focus,
+.contact__form textarea:focus {
+  border-color: #38bdf8; box-shadow: 0 0 0 3px rgba(56,189,248,.2);
+}
+
+/* --- Tight, flush layout polish --- */
+
+/* 1) Kill default page margins + set page baseline */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;                        /* removes the white border around the page */
+  background: #0b1220;              /* matches your hero/footer background */
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* 2) Normalize default spacing so things feel “tight” */
+h1, h2, h3, p { margin-block-start: 0; }
+main { display: block; }             /* old-browser safety */
+
+/* 3) Container polish */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+/* 4) Header spacing + alignment */
+.site-header { background:#0f172a; border-bottom:1px solid rgba(255,255,255,.08); }
+.site-header .container { height: 64px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+
+/* 5) Hero tightening */
+.hero { padding: 56px 0 64px; background:#0b1220; color:#fff; }
+.hero__title { margin: 0 0 8px; font-size: clamp(28px, 6vw, 48px); line-height: 1.1; }
+.hero__lead  { margin: 0 0 16px; color: #93a0b2; max-width: 60ch; }
+.hero__actions { display:flex; gap:12px; flex-wrap:wrap; }
+
+/* 6) Buttons (already had these — repeating ensures they win) */
+.btn { display:inline-block; padding:10px 16px; border-radius:10px;
+       border:1px solid rgba(255,255,255,.25); color:#fff; text-decoration:none; }
+.btn:hover { background:rgba(255,255,255,.08); }
+.btn--primary { background:#38bdf8; border-color:transparent; color:#08111f; }
+.btn--primary:hover { filter:brightness(0.95); }
+
+/* 7) Footer spacing */
+.site-footer { background:#0f172a; color:#cbd5e1; border-top:1px solid rgba(255,255,255,.08); padding:16px 0; }
+.site-footer p { margin: 0; text-align: center; }
+
+/* 8) Simple mobile stack for header */
+@media (max-width: 720px) {
+  .site-header .container { flex-direction: column; align-items: flex-start; height: auto; padding: 12px 16px; }
+  .nav { width: 100%; margin-top: 8px; }
+}
+
+/* Sticky footer */
+html, body { height: 100%; }
+
+body {
+  min-height: 100vh;          /* full viewport height */
+  display: flex;              /* stack header, main, footer */
+  flex-direction: column;
+  margin: 0;                  /* no page gap */
+}
+
+main { flex: 1; }             /* take up remaining space so footer sits at bottom */
