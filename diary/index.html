@@ -1,0 +1,21 @@
+---
+layout: default
+title: Diary
+---
+
+<section class="diary">
+  <div class="container">
+    <h1>Diary</h1>
+    <div class="diary__list">
+      {% assign entries = site.posts | where_exp: 'p', 'p.categories contains "diary"' %}
+      {% for post in entries %}
+        <a class="card" href="{{ post.url | relative_url }}">
+          {% if post.image %}<img src="https://res.cloudinary.com/dodevsdjg/image/upload/v1758368988/black_bouc0i.png" alt="">{% endif %}
+          <h3>{{ post.title }}</h3>
+          <p class="meta">{{ post.date | date: "%b %d, %Y" }}</p>
+          {% if post.excerpt %}<p>{{ post.excerpt | strip_html | truncate: 120 }}</p>{% endif %}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

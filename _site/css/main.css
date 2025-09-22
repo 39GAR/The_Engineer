@@ -167,3 +167,19 @@ body {
 }
 
 main { flex: 1; }             /* take up remaining space so footer sits at bottom */
+
+/* Diary list */
+.diary { padding: 40px 0; }
+.diary h1 { margin: 0 0 16px; }
+.diary__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+.diary .card {
+  display: block; background: #0f172a; color: #cbd5e1; text-decoration: none;
+  border: 1px solid rgba(255,255,255,.08); border-radius: 12px; overflow: hidden;
+}
+.diary .card img { width: 100%; height: 140px; object-fit: cover; display: block; }
+.diary .card h3 { margin: 12px 12px 4px; color: #fff; font-size: 18px; }
+.diary .card .meta { margin: 0 12px 12px; font-size: 13px; color: #93a0b2; }
