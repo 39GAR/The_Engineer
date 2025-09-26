@@ -183,3 +183,41 @@ main { flex: 1; }             /* take up remaining space so footer sits at botto
 .diary .card img { width: 100%; height: 140px; object-fit: cover; display: block; }
 .diary .card h3 { margin: 12px 12px 4px; color: #fff; font-size: 18px; }
 .diary .card .meta { margin: 0 12px 12px; font-size: 13px; color: #93a0b2; }
+
+/* About section */
+.about {
+  padding: 60px 0;
+}
+
+.about h1 {
+  margin-bottom: 24px;
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
+}
+
+.about__content {
+  background: #0f172a;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 8px 18px rgba(0,0,0,.25);
+}
+
+.about__content p {
+  margin: 0 0 16px;
+  color: #cbd5e1;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.about__content strong {
+  color: #fff;
+}
+
+.about__content em {
+  color: #38bdf8;
+  font-style: normal;
+}

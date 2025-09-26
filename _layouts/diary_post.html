@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<section class="cs-hero">
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+    <ul class="cs-meta">
+      <li><strong>Date:</strong> {{ page.date | date: "%d %b %Y" }}</li>
+      {% if page.categories %}
+        <li><strong>Category:</strong> {{ page.categories | join: ", " }}</li>
+      {% endif %}
+    </ul>
+    {% if page.image %}
+      <img src="{{ page.image }}" alt="{{ page.title | escape }}" style="max-width:100%; border-radius:12px; border:1px solid rgba(255,255,255,.08)">
+    {% endif %}
+  </div>
+</section>
+
+<section class="prose">
+  <div class="container">
+    {{ content }}
+    <div class="cs-nav" style="margin-top:16px">
+      <a href="{{ '/diary/' | relative_url }}">← Back to Diary</a>
+    </div>
+  </div>
+</section>
