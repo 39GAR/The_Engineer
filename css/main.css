@@ -220,3 +220,50 @@ main { flex: 1; }             /* take up remaining space so footer sits at botto
   color: #38bdf8;
   font-style: normal;
 }
+
+/* The logo css for the insta, fb stuff */
+.site-footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.site-footer i {
+  margin-right: 8px;
+  color: #555; /* gray tone, change as you like */
+}
+
+.site-footer a {
+  text-decoration: none;
+  color: inherit; /* keeps same color as text */
+}
+
+.site-footer a:hover {
+  color: #25D366; /* e.g., WhatsApp green on hover */
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;   /* centers them horizontally */
+  gap: 30px;                 /* space between items */
+  margin-top: 10px;
+  flex-wrap: wrap;           /* makes it wrap on small screens */
+}
+
+.footer-socials a {
+  text-decoration: none;
+  color: #ddd;              /* soft gray text */
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-socials i {
+  margin-right: 6px;
+  font-size: 16px;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer-socials a:hover i {
+  color: #25D366; /* WhatsApp green or change for hover */
+}
